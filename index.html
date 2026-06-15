@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dota 2 Heroes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="header">
+      <h1>Dota 2 Heroes</h1>
+      <p>Список героїв Dota 2 з пошуком та winrate</p>
+    </header>
+
+    <section class="controls">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Пошук героя..."
+      >
+
+      <button id="sortByName">
+        Сортувати по імені <span id="nameArrow">↑</span>
+      </button>
+
+      <button id="sortByWinrate">
+        Сортувати по winrate <span id="winrateArrow">↓</span>
+      </button>
+    </section>
+
+    <section class="heroes-list" id="heroesList"></section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #111111;
+  color: #ffffff;
+}
+
+.page {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 24px 20px 50px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #ff3c3c;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #e0e0e0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.controls input {
+  width: 260px;
+  padding: 13px 16px;
+  border: 1px solid #ff3c3c;
+  border-radius: 8px;
+  background: #171717;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+}
+
+.controls input::placeholder {
+  color: #999999;
+}
+
+.controls input:focus {
+  border-color: #ffcc00;
+}
+
+.controls button {
+  padding: 13px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #ff3c3c;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.controls button:hover {
+  background: #d93030;
+  transform: translateY(-2px);
+}
+
+.heroes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
+  gap: 18px;
+  width: 100%;
+}
+
+.hero-card {
+  background: linear-gradient(145deg, #202020, #292929);
+  border: 1px solid #383838;
+  border-radius: 14px;
+  padding: 22px 12px;
+  min-height: 130px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+  transition: 0.25s;
+}
+
+.hero-card:hover {
+  transform: translateY(-5px);
+  border-color: #ff3c3c;
+  box-shadow: 0 10px 25px rgba(255, 60, 60, 0.25);
+}
+
+.hero-card h3 {
+  font-size: 21px;
+  line-height: 1.15;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.hero-card p {
+  font-size: 16px;
+  color: #d0d0d0;
+}
+
+.hero-card span {
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.no-result {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #cccccc;
+  font-size: 22px;
+  padding: 40px;
+}
+
+@media (max-width: 700px) {
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .header p {
+    font-size: 16px;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .controls input,
+  .controls button {
+    width: 100%;
+  }
+
+  .heroes-list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
